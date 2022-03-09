@@ -27,3 +27,10 @@ Immutable Examples repository is distributed under the terms of the [Apache Lice
 
 ## Contributing
 Please check [contributing guidelines](CONTRIBUTING.md) to learn how to help this project.
+
+
+## holders
+
+curl --request GET \ 
+     --url 'https://api.x.immutable.com/v1/assets?collection=0x4f1536b8fc15ec9d9177b9f27198883b96bcb257' \
+     --header 'Accept: application/json'

@@ -35,13 +35,13 @@ const component = '[IMX-CREATE-COLLECTION]';
    * Edit your values here
    */
   const params: CreateCollectionParams = {
-    name: 'Gaspard & Joseph Communication',
-    description: 'This collection is used as a mean of communication between Gaspard & Joseph and its community. Cette collection sert de moyen de communication entre Gaspard & Joseph et sa communauté.',
+    name: 'Gaspard & Joseph - Hors-Série',
+    description: "Découvrez la collection Hors série de Gaspard & Joseph. Discover Gaspard & Joseph's special collection.",
     contract_address: collectionContractAddress,
     owner_public_key: ownerPublicKey,
-    // icon_url: '',
-    // metadata_api_url: '',
-    // collection_image_url: '',
+    icon_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmTQmATW93frakgKtQuLukvjhmjA71kYUnXkhfW6U5AaFF/logo.png',
+    metadata_api_url: '',
+    collection_image_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmTQmATW93frakgKtQuLukvjhmjA71kYUnXkhfW6U5AaFF/main.png',
     project_id: parseInt(projectId, 10),
   };
 
