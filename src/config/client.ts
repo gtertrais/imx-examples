@@ -15,6 +15,7 @@ export default {
   tokenId: getEnv('TOKEN_ID'),
   tokenAddress: getEnv('TOKEN_ADDRESS'),
   bulkMintMax: getEnv('BULK_MINT_MAX'),
+  ipfsCid: getEnv('IPFS_CID'),
   // Onboarding
   ownerAccountPrivateKey: getEnv('OWNER_ACCOUNT_PRIVATE_KEY'),
   collectionContractAddress: getEnv('COLLECTION_CONTRACT_ADDRESS'),

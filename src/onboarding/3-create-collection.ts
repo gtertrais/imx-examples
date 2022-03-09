@@ -36,11 +36,11 @@ const component = '[IMX-CREATE-COLLECTION]';
    */
   const params: CreateCollectionParams = {
     name: 'Gaspard & Joseph - Hors-Série',
-    description: "Découvrez la collection Hors série de Gaspard & Joseph. Discover Gaspard & Joseph's special collection.",
+    description: "Découvrez la collection Hors-Série de Gaspard & Joseph. Discover Gaspard & Joseph's special collection.",
     contract_address: collectionContractAddress,
     owner_public_key: ownerPublicKey,
     icon_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmTQmATW93frakgKtQuLukvjhmjA71kYUnXkhfW6U5AaFF/logo.png',
-    metadata_api_url: '',
+    metadata_api_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmQjL895Bjs6h8fSGZaaJujxVkkq7g1GTjjqWMHro1s2nQ/IMX',
     collection_image_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmTQmATW93frakgKtQuLukvjhmjA71kYUnXkhfW6U5AaFF/main.png',
     project_id: parseInt(projectId, 10),
   };

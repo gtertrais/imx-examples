@@ -33,6 +33,7 @@ const waitForTransaction = async (promise: Promise<string>) => {
 
 (async (): Promise<void> => {
   const BULK_MINT_MAX = env.bulkMintMax;
+  const IPFS_URL = env.ipfsCid;
   const { wallet, number } = parse<BulkMintScriptArgs>({
     wallet: {
       type: String,
@@ -74,7 +75,7 @@ const waitForTransaction = async (promise: Promise<string>) => {
 
   const tokens = Array.from({ length: number }, (_, i) => i).map(i => ({
     id: (tokenId + i).toString(),
-    blueprint: 'onchain-metadata',
+    blueprint: 'ipfs://' + IPFS_URL + '/' + (tokenId + i).toString(),
   }));
 
   const payload: ImmutableMethodParams.ImmutableOffchainMintV2ParamsTS = [
