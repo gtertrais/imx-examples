@@ -34,6 +34,7 @@
     "public:get-collection": "ts-node -r tsconfig-paths/register -r dotenv/config ./src/public/get-collection.ts",
     "public:get-metadata-schema": "ts-node -r tsconfig-paths/register -r dotenv/config ./src/public/get-metadata-schema.ts",
     "public:get-holders": "ts-node -r tsconfig-paths/register -r dotenv/config ./src/public/get-holders.ts",
+    "admin:send-nft": "ts-node -r tsconfig-paths/register -r dotenv/config ./src/admin/send-nft.ts",
     "admin:burn-nft": "ts-node -r tsconfig-paths/register -r dotenv/config ./src/admin/burn-nft.ts",
     "admin:sell-nft": "ts-node -r tsconfig-paths/register -r dotenv/config ./src/admin/sell-nft.ts"
   },

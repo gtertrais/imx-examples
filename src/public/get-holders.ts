@@ -48,18 +48,16 @@ const component = '[IMX-GET-COLLECTION]';
     )
 
     let index = 0;
-    var jsonData: { wallet: any; }[] = [];
+    var dataArray: any[] = [];
     result.forEach(function (value) {
         index++;
         console.log(value.user);
-        jsonData.push( {
-            "wallet": value.user
-        });
+        dataArray.push(value.user);
     });
 
     console.log(index);
 
-    fs.writeFile("./holders/output.json", JSON.stringify(jsonData), 'utf8', function (err: any) {
+    fs.writeFileSync("./src/holders/holders.txt", JSON.stringify(dataArray), 'utf8', function (err: any) {
         if (err) {
             console.log("An error occured while writing JSON Object to File.");
             return console.log(err);
