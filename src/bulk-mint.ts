@@ -74,32 +74,33 @@ const waitForTransaction = async (promise: Promise<string>) => {
   log.info(component, `OFF-CHAIN MINT ${number} NFTS`);
 
   const tokens = Array.from({ length: number }, (_, i) => i).map(i => ({
-    id: (tokenId + i).toString(),
-    blueprint: 'ipfs://' + IPFS_URL + '/' + (tokenId + i).toString(),
-  }));
+      id: (tokenId + i).toString(),
+      blueprint: "ipfs://" + IPFS_URL + "/" + (tokenId + i).toString(),
+    }));
 
   const payload: ImmutableMethodParams.ImmutableOffchainMintV2ParamsTS = [
     {
       contractAddress: env.tokenAddress, // NOTE: a mintable token contract is not the same as regular erc token contract
-      royalties: [ // global fees
-        {
-          recipient: '0x8C74C7ec112BCb2a668F5534380719dA8A55f60e',
-          percentage: 5
-        },
-        {
-          recipient: '0x18585a63F9B73a763cBc632CA4Dc4441FaCb71D8',
-          percentage: 5
-        }
-      ],
       users: [
         {
           etherKey: wallet.toLowerCase(),
           tokens,
         },
       ],
+      royalties: [ // global fees
+        {
+          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
+          percentage: 5
+        },
+        {
+          recipient: "0x18585a63F9B73a763cBc632CA4Dc4441FaCb71D8",
+          percentage: 5
+        }
+      ],
     },
-  ];
+  ]
 
+  
   const result = await minter.mintV2(payload);
   console.log(result);
 })().catch(e => {
