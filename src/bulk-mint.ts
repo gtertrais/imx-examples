@@ -20,8 +20,8 @@ const waitForTransaction = async (promise: Promise<string>) => {
   const txId = await promise;
   log.info(component, 'Waiting for transaction', {
     txId,
-    etherscanLink: `https://ropsten.etherscan.io/tx/${txId}`,
-    alchemyLink: `https://dashboard.alchemyapi.io/mempool/eth-ropsten/tx/${txId}`,
+    etherscanLink: `https://etherscan.io/tx/${txId}`,
+    alchemyLink: `https://dashboard.alchemyapi.io/mempool/eth-mainnet/tx/${txId}`,
   });
   const receipt = await provider.waitForTransaction(txId);
   if (receipt.status === 0) {
@@ -81,6 +81,16 @@ const waitForTransaction = async (promise: Promise<string>) => {
   const payload: ImmutableMethodParams.ImmutableOffchainMintV2ParamsTS = [
     {
       contractAddress: env.tokenAddress, // NOTE: a mintable token contract is not the same as regular erc token contract
+      royalties: [ // global fees
+        {
+          recipient: '0x8C74C7ec112BCb2a668F5534380719dA8A55f60e',
+          percentage: 5
+        },
+        {
+          recipient: '0x18585a63F9B73a763cBc632CA4Dc4441FaCb71D8',
+          percentage: 5
+        }
+      ],
       users: [
         {
           etherKey: wallet.toLowerCase(),
