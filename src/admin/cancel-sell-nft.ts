@@ -34,12 +34,13 @@ const component = '[IMX-UPDATE-COLLECTION]';
     let assets: any[] = [];
     do {
         const params: ImmutableMethodParams.ImmutableGetAssetsParamsTS = {
-            collection: collectionContractAddress,
-            user: wallet.address,
-            cursor: assetCursor
+            cursor: assetCursor,
+            user: wallet.address, 
+            sell_orders: true
         };
         let assetRequest = await user.getAssets(params);
         assets = assets.concat(assetRequest.result);
+        
         assetCursor = assetRequest.cursor;
     } while (assetCursor);
 
@@ -51,28 +52,15 @@ const component = '[IMX-UPDATE-COLLECTION]';
 
 
     assets.forEach(async function (value) {
-        await user.createOrder({
-            user: wallet.address.toLowerCase(),
-            amountSell: BigNumber.from(1),
-            tokenSell: {
-                type: ERC721TokenType.ERC721,
-                data: {
-                    tokenAddress: env.collectionContractAddress.toLowerCase(),
-                    tokenId: value.token_id,
-                }
-            },
-            amountBuy: BigNumber.from('60000000000000000'),//0.0666 ETH (qjouter les royalties)
-            tokenBuy: {
-                type: ETHTokenType.ETH,
-                data: {
-                    decimals: 18
-                }
-            },
-        });
+        
+        await user.cancelOrder(
+            value.orders.sell_orders[0].order_id
+        );
+        
     });
 
 
-    log.info(component, 'Selling assets');
+    log.info(component, 'Cancel Sell assets');
 })().catch(e => {
     log.error(component, e);
     process.exit(1);

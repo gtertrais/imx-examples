@@ -63,6 +63,9 @@ const component = '[IMX-UPDATE-COLLECTION]';
         index = index + 1;
         console.log(value);
         console.log(index);
+        if(index == 9 || index == 36 || index == 26 ){
+            index = index + 1;
+        }
         await user.transfer({
             sender: wallet.address.toLowerCase(),
             token: {

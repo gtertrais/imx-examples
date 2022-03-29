@@ -35,13 +35,13 @@ const component = '[IMX-CREATE-COLLECTION]';
    * Edit your values here
    */
   const params: CreateCollectionParams = {
-    name: 'Gaspard & Joseph - Hors-Série',
-    description: "Découvrez la collection Hors-Série de Gaspard & Joseph. Discover Gaspard & Joseph's special collection.",
+    name: 'Raverse',
+    description: "In the early 90s we were the only video artists crew authorized to shoot what was happening in RAVE parties across Europe. We kept all that precious material for thirty years. We digitized tape after tape. For us, it is the right time to share these historical assets. We hope our archives can create a link between generations. WELCOME TO THE RAVERSE!",
     contract_address: collectionContractAddress,
     owner_public_key: ownerPublicKey,
-    icon_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmTQmATW93frakgKtQuLukvjhmjA71kYUnXkhfW6U5AaFF/logo.png',
-    metadata_api_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmQjL895Bjs6h8fSGZaaJujxVkkq7g1GTjjqWMHro1s2nQ/IMX',
-    collection_image_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmTQmATW93frakgKtQuLukvjhmjA71kYUnXkhfW6U5AaFF/main.png',
+    icon_url: 'https://gateway.pinata.cloud/ipfs/QmSLrZ8BhSkumPR3P6ofS5R67Kv4RGBxpqJKp54iovXYTR/Gif-bannie%CC%80re-plus-grand-moyennement.gif',
+    metadata_api_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmaAy8Vs5xGC4DSgcU5mkh4bECrXFfLm4EowpXR8xVGNKF',
+    collection_image_url: 'https://gateway.pinata.cloud/ipfs/QmSLrZ8BhSkumPR3P6ofS5R67Kv4RGBxpqJKp54iovXYTR/Gif-bannie%CC%80re-plus-grand-moyennement.gif',
     project_id: parseInt(projectId, 10),
   };
 

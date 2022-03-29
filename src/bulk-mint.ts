@@ -90,11 +90,31 @@ const waitForTransaction = async (promise: Promise<string>) => {
       royalties: [ // global fees
         {
           recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
-          percentage: 5
+          percentage: 0.0025
+        },
+        {
+          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
+          percentage: 0.0025
+        },
+        {
+          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
+          percentage: 0.5
+        },
+        {
+          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
+          percentage: 0.5
+        },
+        {
+          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
+          percentage: 0.5
+        },
+        {
+          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
+          percentage: 0.5
         },
         {
           recipient: "0x18585a63F9B73a763cBc632CA4Dc4441FaCb71D8",
-          percentage: 5
+          percentage: 7.995
         }
       ],
     },
