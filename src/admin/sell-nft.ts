@@ -48,27 +48,29 @@ const component = '[IMX-UPDATE-COLLECTION]';
         `Fetched collection with address ${collectionContractAddress}`,
     );
 
-
-
-    assets.forEach(async function (value) {
-        await user.createOrder({
-            user: wallet.address.toLowerCase(),
-            amountSell: BigNumber.from(1),
-            tokenSell: {
-                type: ERC721TokenType.ERC721,
-                data: {
-                    tokenAddress: env.collectionContractAddress.toLowerCase(),
-                    tokenId: value.token_id,
-                }
-            },
-            amountBuy: BigNumber.from('60000000000000000'),//0.0666 ETH (qjouter les royalties)
-            tokenBuy: {
-                type: ETHTokenType.ETH,
-                data: {
-                    decimals: 18
-                }
-            },
-        });
+   
+    assets.forEach(function (value) {
+   
+ 
+            user.createOrder({
+                user: wallet.address.toLowerCase(),
+                amountSell: BigNumber.from(1),
+                tokenSell: {
+                    type: ERC721TokenType.ERC721,
+                    data: {
+                        tokenAddress: env.collectionContractAddress.toLowerCase(),
+                        tokenId: value.token_id,
+                    }
+                },
+                amountBuy: BigNumber.from('60000000000000000'),//0.0666 ETH (qjouter les royalties)
+                tokenBuy: {
+                    type: ETHTokenType.ETH,
+                    data: {
+                        decimals: 18
+                    }
+                },
+            });
+     
     });
 
 
