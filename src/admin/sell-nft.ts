@@ -48,10 +48,9 @@ const component = '[IMX-UPDATE-COLLECTION]';
 
         let count = 0;
 
-    assets.forEach(function (value) {
-        if(count >= 400 && count < 500){
- 
-            user.createOrder({
+    assets.forEach(async function (value) {
+        if(count < 100){
+            await user.createOrder({
                 user: wallet.address.toLowerCase(),
                 amountSell: BigNumber.from(1),
                 tokenSell: {
@@ -69,8 +68,8 @@ const component = '[IMX-UPDATE-COLLECTION]';
                     }
                 },
             });
-        } 
-        count = count + 1;
+        }
+     count = count+1
     });
 
 
