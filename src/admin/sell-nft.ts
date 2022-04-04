@@ -32,7 +32,6 @@ const component = '[IMX-UPDATE-COLLECTION]';
 
     let assetCursor;
     let assets: any[] = [];
-    do {
         const params: ImmutableMethodParams.ImmutableGetAssetsParamsTS = {
             collection: collectionContractAddress,
             user: wallet.address,
@@ -41,7 +40,6 @@ const component = '[IMX-UPDATE-COLLECTION]';
         let assetRequest = await user.getAssets(params);
         assets = assets.concat(assetRequest.result);
         assetCursor = assetRequest.cursor;
-    } while (assetCursor);
 
     log.info(
         component,
