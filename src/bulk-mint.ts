@@ -89,32 +89,32 @@ const waitForTransaction = async (promise: Promise<string>) => {
       ],
       royalties: [ // global fees
         {
-          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
-          percentage: 0.0025
-        },
-        {
-          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
-          percentage: 0.0025
-        },
-        {
-          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
+          recipient: "0x8e5f7fAD01819BF29cfD637C88D7977f7bC59BCd",//unknown artists - 5%
           percentage: 0.5
         },
         {
-          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
+          recipient: "0x47cDd0F1c9332168db926eE5B4E5663c9ba20F05",//artist Haiti - 5%
           percentage: 0.5
         },
         {
-          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
+          recipient: "0x7E9e3478C203bC5efA1460365185d35Fcb488915",//artist Peznas - 5%
           percentage: 0.5
         },
         {
-          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",
+          recipient: "0x1689B564814db5f1C7Abd74129771D282E2d652b",//MoCa - 5%
           percentage: 0.5
         },
         {
-          recipient: "0x18585a63F9B73a763cBc632CA4Dc4441FaCb71D8",
-          percentage: 7.995
+          recipient: "0x3E4A99ffBb1B1e1A29B9C215d9B7962dbd59c35e",//AlphaVerse - 5%
+          percentage: 0.5
+        },
+        {
+          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",//G&J - 5%
+          percentage: 0.5
+        },
+        {
+          recipient: "0x6b823fbf452678187327cBDcf711B14F1A918126",//Chac - 70%
+          percentage: 7.0
         }
       ],
     },

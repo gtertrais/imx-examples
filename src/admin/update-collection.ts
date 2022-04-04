@@ -33,7 +33,7 @@ const component = '[IMX-UPDATE-COLLECTION]';
    * Edit your values here
    */
   const params: UpdateCollectionParams = {
-    name: 'RAVERSE',
+    description: "In the early 90s we were the only video artists crew authorized to shoot what was happening in RAVE parties across Europe. We kept all that precious material for thirty years. We digitized tape after tape. For us, it is the right time to share these historical assets. We hope our archives can create a link between generations. WELCOME TO THE RAVERSE! Drop Link : https://gaspardetjoseph.fr/raverse?lang=en",
   };
 
   let collection;

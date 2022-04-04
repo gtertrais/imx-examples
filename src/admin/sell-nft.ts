@@ -48,9 +48,10 @@ const component = '[IMX-UPDATE-COLLECTION]';
         `Fetched collection with address ${collectionContractAddress}`,
     );
 
-   
+        let count = 0;
+
     assets.forEach(function (value) {
-   
+        if(count >= 400 && count < 500){
  
             user.createOrder({
                 user: wallet.address.toLowerCase(),
@@ -70,7 +71,8 @@ const component = '[IMX-UPDATE-COLLECTION]';
                     }
                 },
             });
-     
+        } 
+        count = count + 1;
     });
 
 
