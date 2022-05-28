@@ -33,7 +33,7 @@ const component = '[IMX-UPDATE-COLLECTION]';
    * Edit your values here
    */
   const params: UpdateCollectionParams = {
-    metadata_api_url: 'https://fleursetfeuillages.mypinata.cloud/ipfs/Qmd8TGqztQwa66o1hYVSUmMcxwXESrwLquGmscwuJKsSCm'
+    name: 'Les Cercles de Cassiodore',
   };
 
   let collection;

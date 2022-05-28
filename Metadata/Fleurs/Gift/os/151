@@ -1,0 +1,16 @@
+{
+    "name": "Le Bijou",
+    "description": "Chers collectionneuses, chers collectionneurs, Gaspard & Joseph, l'éditeur NFT du patrimoine français, a le plaisir de vous annoncer son nouveau projet, SCRIPTORIUM, monté en partenariat avec la maison d'artistes fleurs&Feuillages human.art ! Pour célébrer cela, nous vous offrons une œuvre de Cassiodore, le premier artiste que nous mettons en valeur dans le cadre de SCRIPTORIUM. « Les Cercles de Cassiodore », la première collection du SCRIPTORIUM, sera dévoilée le 22 juin 2022 à 22h sur notre site ! Ne manquez pas le drop, et profitez pleinement du bijou calligraphié à l'encre de Chine et à la feuille d'or que nous vous offrons aujourd'hui. Gaspard & Joseph. - Dear collectors, dear collectors, Gaspard & Joseph, the NFT publisher of French heritage, is pleased to announce its new project, SCRIPTORIUM, set up in partnership with the artists' house fleurs&Feuillages human.art! To celebrate this, we are offering you a work by Cassiodore, the first artist we highlight as part of SCRIPTORIUM. « The Circles of Cassiodore », the first collection of SCRIPTORIUM, will be unveiled on June 22, 2022 at 10 p.m. on our website! Don't miss the drop, and take full advantage of the Indian ink and gold leaf calligraphy jewel that we are offering you today. Gaspard & Joseph.",
+    "image": "ipfs://QmbSoWdEb8UWt3LjqDYipbqvy9wFvUFQsyXzLr4Boa4cUT",
+    "external_url": "https://market.immutable.com/assets?collection=0xdff1faa4280aed96bdf59409e818cddf3393e561",
+    "attributes": [
+        {"trait_type": "project", "value": "Scriptorium"},
+        {"trait_type": "collection", "value": "#1 - Les Cercles de Cassiodore"},
+        {"trait_type": "sub_collection", "value": "Le Bijou"},
+        {"trait_type": "producer", "value": "fleurs&Feuillages human.art"},
+        {"trait_type": "creator", "value": "Charles Boisard"},
+        {"trait_type": "editor", "value": "Gaspard & Joseph"},
+        {"trait_type": "domain", "value": "Giveaway"},
+        {"trait_type": "minting_date", "value": "28/05/2022"}
+    ]
+}

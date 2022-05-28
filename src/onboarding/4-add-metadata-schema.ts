@@ -126,12 +126,7 @@ const component = '[IMX-ADD-COLLECTION-METADATA-SCHEMA]';
         name: 'domain',
         type: MetadataTypes.Enum,
         filterable: true,
-      },
-      {
-        name: 'minting_date',
-        type: MetadataTypes.Enum,
-        filterable: true,
-      },
+      }
     ],
   };
 

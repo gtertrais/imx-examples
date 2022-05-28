@@ -40,7 +40,7 @@ const component = '[IMX-CREATE-COLLECTION]';
     contract_address: collectionContractAddress,
     owner_public_key: ownerPublicKey,
     icon_url: 'https://fleursetfeuillages.mypinata.cloud/ipfs/QmYDGRRZP6dku7zTuuq8iPnnQG7mHvRVbJdjozDXyknPXD',
-    metadata_api_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmaAy8Vs5xGC4DSgcU5mkh4bECrXFfLm4EowpXR8xVGNKF',
+    metadata_api_url: 'https://fleursetfeuillages.mypinata.cloud/ipfs/QmefB4Y3cAgSE5ZnPbTJgZdVkKDbC8AF2wutM5pjoKyT8R',
     collection_image_url: 'https://fleursetfeuillages.mypinata.cloud/ipfs/Qmc1jxLYQSAecuCAUnuL74jHP3uTdSmYyPhZLKpRHjsSgF',
     project_id: parseInt(projectId, 10),
   };
