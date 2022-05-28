@@ -28,6 +28,9 @@ const component = '[IMX-UPDATE-COLLECTION]';
         enableDebug: true,
     });
 
+    function delay(time: number | undefined) {
+        return new Promise(resolve => setTimeout(resolve, time));
+    }
 
 
     let assetCursor;
@@ -35,12 +38,12 @@ const component = '[IMX-UPDATE-COLLECTION]';
     do {
         const params: ImmutableMethodParams.ImmutableGetAssetsParamsTS = {
             cursor: assetCursor,
-            user: wallet.address, 
+            user: wallet.address,
             sell_orders: true
         };
         let assetRequest = await user.getAssets(params);
         assets = assets.concat(assetRequest.result);
-        
+
         assetCursor = assetRequest.cursor;
     } while (assetCursor);
 
@@ -52,11 +55,11 @@ const component = '[IMX-UPDATE-COLLECTION]';
 
 
     assets.forEach(async function (value) {
-        
+
         await user.cancelOrder(
             value.orders.sell_orders[0].order_id
         );
-        
+
     });
 
 

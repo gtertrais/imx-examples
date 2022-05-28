@@ -35,13 +35,13 @@ const component = '[IMX-CREATE-COLLECTION]';
    * Edit your values here
    */
   const params: CreateCollectionParams = {
-    name: 'Raverse',
-    description: "In the early 90s we were the only video artists crew authorized to shoot what was happening in RAVE parties across Europe. We kept all that precious material for thirty years. We digitized tape after tape. For us, it is the right time to share these historical assets. We hope our archives can create a link between generations. WELCOME TO THE RAVERSE!",
+    name: 'SCRIPTORIUM - #1. « Les Cercles de Cassiodore »',
+    description: "La toute première collection de SCRIPTORIUM est conçue en signe d’hommage à Cassiodore, cet érudit né en 480 à Calabre en Italie. Sans lui, le savoir, la culture européenne, les bibliothèques et les universités ne seraient pas telles que nous les connaissons aujourd’hui ! Il a naturellement toute sa place, plus de 15 siècles plus tard, dans le Métavers. « Les Cercles de Cassiodore » sont une collection de 32 œuvres originales réalisées par le calligraphe Charles Boisart : tout simplement l’un parmi les meilleurs artistes de notre époque ! The very first collection of SCRIPTORIUM is designed as a sign of tribute to Cassiodore, this scholar born in 480 in Calabria in Italy. Without him, knowledge, European culture, libraries and universities would not be as we know them today! He naturally has its legitimacy, more than 15 centuries later, in the Metaverse. « The circles of Cassiodore » is a collection of 32 original artworks by the calligrapher Charles Boisart: quite simply one among the best artists of our time!",
     contract_address: collectionContractAddress,
     owner_public_key: ownerPublicKey,
-    icon_url: 'https://gateway.pinata.cloud/ipfs/QmSLrZ8BhSkumPR3P6ofS5R67Kv4RGBxpqJKp54iovXYTR/Gif-bannie%CC%80re-plus-grand-moyennement.gif',
+    icon_url: 'https://fleursetfeuillages.mypinata.cloud/ipfs/QmYDGRRZP6dku7zTuuq8iPnnQG7mHvRVbJdjozDXyknPXD',
     metadata_api_url: 'https://ipfs.gaspardetjoseph.fr/ipfs/QmaAy8Vs5xGC4DSgcU5mkh4bECrXFfLm4EowpXR8xVGNKF',
-    collection_image_url: 'https://gateway.pinata.cloud/ipfs/QmSLrZ8BhSkumPR3P6ofS5R67Kv4RGBxpqJKp54iovXYTR/Gif-bannie%CC%80re-plus-grand-moyennement.gif',
+    collection_image_url: 'https://fleursetfeuillages.mypinata.cloud/ipfs/Qmc1jxLYQSAecuCAUnuL74jHP3uTdSmYyPhZLKpRHjsSgF',
     project_id: parseInt(projectId, 10),
   };
 

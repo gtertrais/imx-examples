@@ -57,7 +57,7 @@ const component = '[IMX-UPDATE-COLLECTION]';
         `Fetched collection with address ${collectionContractAddress}`,
     );
 
-    let index = 0;
+    let index = 100;
 
     walletArray.forEach(async function (value: any) {
         index = index + 1;

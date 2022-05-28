@@ -12,9 +12,7 @@ const fs = require('fs');
 const component = '[IMX-GET-COLLECTION]';
 
 (async (): Promise<void> => {
-    const collectionContractAddress = requireEnvironmentVariable(
-        'COLLECTION_CONTRACT_ADDRESS',
-    );
+    const collectionContractAddress = '0x4f1536b8fc15ec9d9177b9f27198883b96bcb257'
 
     const user = await ImmutableXClient.build({
         ...env.client,

@@ -51,7 +51,7 @@ const component = '[IMX-UPDATE-COLLECTION]';
 
 
     assets.forEach(async function (value) {
-        if (value.token_id > 60) {
+        if (value.token_id > 200) {
             await user.burn({
                 sender: wallet.address,
                 token: {

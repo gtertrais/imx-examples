@@ -78,6 +78,9 @@ const waitForTransaction = async (promise: Promise<string>) => {
       blueprint: "ipfs://" + IPFS_URL + "/" + (tokenId + i).toString(),
     }));
 
+  console.log(tokens);
+  
+
   const payload: ImmutableMethodParams.ImmutableOffchainMintV2ParamsTS = [
     {
       contractAddress: env.tokenAddress, // NOTE: a mintable token contract is not the same as regular erc token contract
@@ -89,32 +92,16 @@ const waitForTransaction = async (promise: Promise<string>) => {
       ],
       royalties: [ // global fees
         {
-          recipient: "0x8e5f7fAD01819BF29cfD637C88D7977f7bC59BCd",//unknown artists - 5%
-          percentage: 0.5
+          recipient: "0x438970aD91E61E11D8E3dFB4abe1103E5AA6F32B",//Charles - 33.33%
+          percentage: 3.333
         },
         {
-          recipient: "0x47cDd0F1c9332168db926eE5B4E5663c9ba20F05",//artist Haiti - 5%
-          percentage: 0.5
+          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",//G&J - 33.33%
+          percentage: 3.333
         },
         {
-          recipient: "0x7E9e3478C203bC5efA1460365185d35Fcb488915",//artist Peznas - 5%
-          percentage: 0.5
-        },
-        {
-          recipient: "0x1689B564814db5f1C7Abd74129771D282E2d652b",//MoCa - 5%
-          percentage: 0.5
-        },
-        {
-          recipient: "0x3E4A99ffBb1B1e1A29B9C215d9B7962dbd59c35e",//AlphaVerse - 5%
-          percentage: 0.5
-        },
-        {
-          recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",//G&J - 5%
-          percentage: 0.5
-        },
-        {
-          recipient: "0x6b823fbf452678187327cBDcf711B14F1A918126",//Chac - 70%
-          percentage: 7.0
+          recipient: "0x58cfBA4FB1d24B2c7d404eB199abCb66f8c71C3a",//Laurent - 33.33%
+          percentage: 3.333
         }
       ],
     },

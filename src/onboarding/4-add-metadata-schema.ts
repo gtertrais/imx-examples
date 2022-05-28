@@ -45,14 +45,57 @@ const component = '[IMX-ADD-COLLECTION-METADATA-SCHEMA]';
       {
         name: 'name',
         type: MetadataTypes.Text,
+        filterable: false,
       },
       {
         name: 'description',
         type: MetadataTypes.Text,
+        filterable: false,
       },
       {
         name: 'image_url',
         type: MetadataTypes.Text,
+        filterable: false,
+      },
+      {
+        name: 'animation_url',
+        type: MetadataTypes.Text,
+        filterable: false,
+      },
+      {
+        name: 'animation_url_mime_type',
+        type: MetadataTypes.Text,
+        filterable: false,
+      },
+      {
+        name: 'external_url',
+        type: MetadataTypes.Text,
+        filterable: false,
+      },
+      {
+        name: 'pdf',
+        type: MetadataTypes.Text,
+        filterable: false,
+      },
+      {
+        name: 'rarity',
+        type: MetadataTypes.Enum,
+        filterable: true,
+      },
+      {
+        name: 'project',
+        type: MetadataTypes.Enum,
+        filterable: true,
+      },
+      {
+        name: 'collection',
+        type: MetadataTypes.Enum,
+        filterable: true,
+      },
+      {
+        name: 'sub_collection',
+        type: MetadataTypes.Enum,
+        filterable: true,
       },
       {
         name: 'editor',
@@ -64,7 +107,31 @@ const component = '[IMX-ADD-COLLECTION-METADATA-SCHEMA]';
         type: MetadataTypes.Enum,
         filterable: true,
       },
-      // ..add rest of schema here
+      {
+        name: 'producer',
+        type: MetadataTypes.Enum,
+        filterable: true,
+      },
+      {
+        name: 'sound',
+        type: MetadataTypes.Enum,
+        filterable: true,
+      },
+      {
+        name: 'motion_design',
+        type: MetadataTypes.Enum,
+        filterable: true,
+      },
+      {
+        name: 'domain',
+        type: MetadataTypes.Enum,
+        filterable: true,
+      },
+      {
+        name: 'minting_date',
+        type: MetadataTypes.Enum,
+        filterable: true,
+      },
     ],
   };
 

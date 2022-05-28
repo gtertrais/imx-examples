@@ -32,24 +32,28 @@ const component = '[IMX-UPDATE-COLLECTION]';
 
     let assetCursor;
     let assets: any[] = [];
+    do {
         const params: ImmutableMethodParams.ImmutableGetAssetsParamsTS = {
-            collection: collectionContractAddress,
+            cursor: assetCursor,
             user: wallet.address,
-            cursor: assetCursor
+            sell_orders: true
         };
         let assetRequest = await user.getAssets(params);
         assets = assets.concat(assetRequest.result);
+
         assetCursor = assetRequest.cursor;
+    } while (assetCursor);
 
     log.info(
         component,
         `Fetched collection with address ${collectionContractAddress}`,
     );
 
-        let count = 0;
+    let count = 0;
 
     assets.forEach(async function (value) {
-        if(count < 100){
+        
+        if (!value.orders) {
             await user.createOrder({
                 user: wallet.address.toLowerCase(),
                 amountSell: BigNumber.from(1),
@@ -60,7 +64,7 @@ const component = '[IMX-UPDATE-COLLECTION]';
                         tokenId: value.token_id,
                     }
                 },
-                amountBuy: BigNumber.from('60000000000000000'),//0.0666 ETH (qjouter les royalties)
+                amountBuy: BigNumber.from('90000000000000000'),//0.0666 ETH (qjouter les royalties)
                 tokenBuy: {
                     type: ETHTokenType.ETH,
                     data: {
@@ -68,8 +72,9 @@ const component = '[IMX-UPDATE-COLLECTION]';
                     }
                 },
             });
+            count = count + 1
         }
-     count = count+1
+        
     });
 
 
