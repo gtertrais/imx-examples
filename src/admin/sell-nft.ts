@@ -64,7 +64,7 @@ const component = '[IMX-UPDATE-COLLECTION]';
                         tokenId: value.token_id,
                     }
                 },
-                amountBuy: BigNumber.from('90000000000000000'),//0.0666 ETH (qjouter les royalties)
+                amountBuy: BigNumber.from('43636000000000000'),//0.0666 ETH (qjouter les royalties)
                 tokenBuy: {
                     type: ETHTokenType.ETH,
                     data: {

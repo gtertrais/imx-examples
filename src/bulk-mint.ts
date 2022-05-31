@@ -93,15 +93,15 @@ const waitForTransaction = async (promise: Promise<string>) => {
       royalties: [ // global fees
         {
           recipient: "0x438970aD91E61E11D8E3dFB4abe1103E5AA6F32B",//Charles - 33.33%
-          percentage: 3.333
+          percentage: 3.0
         },
         {
           recipient: "0x8C74C7ec112BCb2a668F5534380719dA8A55f60e",//G&J - 33.33%
-          percentage: 3.333
+          percentage: 3.0
         },
         {
           recipient: "0x58cfBA4FB1d24B2c7d404eB199abCb66f8c71C3a",//Laurent - 33.33%
-          percentage: 3.333
+          percentage: 3.0
         }
       ],
     },

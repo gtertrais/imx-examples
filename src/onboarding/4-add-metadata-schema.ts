@@ -73,7 +73,12 @@ const component = '[IMX-ADD-COLLECTION-METADATA-SCHEMA]';
         filterable: false,
       },
       {
-        name: 'pdf',
+        name: 'magazine',
+        type: MetadataTypes.Text,
+        filterable: false,
+      },
+      {
+        name: 'original_image',
         type: MetadataTypes.Text,
         filterable: false,
       },
