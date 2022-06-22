@@ -33,7 +33,7 @@ const component = '[IMX-UPDATE-COLLECTION]';
    * Edit your values here
    */
   const params: UpdateCollectionParams = {
-    collection_image_url: 'https://fleursetfeuillages.mypinata.cloud/ipfs/QmYDGRRZP6dku7zTuuq8iPnnQG7mHvRVbJdjozDXyknPXD',
+    metadata_api_url: 'https://raverse.mypinata.cloud/ipfs/QmNn3jNZ28xTaw57xh1xt7oti8yCXaSKJgJfXFvjXVLQGD',
   };
 
   let collection;

@@ -55,10 +55,20 @@ const component = '[IMX-UPDATE-COLLECTION]';
 
 
     assets.forEach(async function (value) {
+        console.log(value.orders);
+        
+        if(value.orders && value.orders.sell_orders){
+            try {
+                await user.cancelOrder(
+                    value.orders.sell_orders[0].order_id
+                );
+            } catch (error) {
+                console.log(error);
+                
+            }
 
-        await user.cancelOrder(
-            value.orders.sell_orders[0].order_id
-        );
+        }
+      
 
     });
 

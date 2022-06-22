@@ -30,18 +30,15 @@ const component = '[IMX-UPDATE-COLLECTION]';
 
 
 
-    let assetCursor;
-    let assets: any[] = [];
-    do {
-        const params: ImmutableMethodParams.ImmutableGetAssetsParamsTS = {
-            collection: collectionContractAddress,
-            user: wallet.address,
-            cursor: assetCursor
-        };
-        let assetRequest = await user.getAssets(params);
-        assets = assets.concat(assetRequest.result);
-        assetCursor = assetRequest.cursor;
-    } while (assetCursor);
+    const params: ImmutableMethodParams.ImmutableGetAssetsParamsTS = {
+        collection: collectionContractAddress,
+        user: wallet.address,
+
+    };
+    let assetRequest = await user.getAssets(params);
+    let assets = assetRequest.result;
+    console.log(assets.length);
+    
 
     log.info(
         component,
@@ -49,21 +46,18 @@ const component = '[IMX-UPDATE-COLLECTION]';
     );
 
 
-
     assets.forEach(async function (value) {
-        if (value.token_id > 200) {
-            await user.burn({
-                sender: wallet.address,
-                token: {
-                    type: ERC721TokenType.ERC721,
-                    data: {
-                        tokenId: value,
-                        tokenAddress: collectionContractAddress
-                    }
-                },
-                quantity: BigNumber.from(1),
-            });
-        }
+        await user.burn({
+            sender: wallet.address,
+            token: {
+                type: ERC721TokenType.ERC721,
+                data: {
+                    tokenId: value.token_id,
+                    tokenAddress: collectionContractAddress
+                }
+            },
+            quantity: BigNumber.from(1),
+        });
     });
 
 
